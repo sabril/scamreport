@@ -4,7 +4,7 @@ ruby "2.0.0"
 gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 gem 'pg'
 # gem 'mysql2'
 gem "mongoid"
@@ -17,6 +17,7 @@ gem "cancan"
 gem 'sass-rails', '~> 4.0.1'
 gem "less-rails"
 gem "therubyracer"
+gem 'quiet_assets', :group => :development
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -42,8 +43,8 @@ group :doc do
 end
 
 #gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails', :branch => '3.0.0'
-gem 'twitter-bootstrap-rails'#, git: "git@github.com:seyhunak/twitter-bootstrap-rails.git", branch: "bootstrap3"
-
+gem 'twitter-bootstrap-rails', git: "git@github.com:seyhunak/twitter-bootstrap-rails.git", branch: "bootstrap3"
+gem "simple_form"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

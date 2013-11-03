@@ -1,14 +1,392 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Scamsms</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Scam Report" %></title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
 
-</body>
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  </head>
+  <body class="blog blog-small">
+      <div class="wrap">
+         <!-- Header Start -->
+         <header id="header">
+            <!-- Header Top Bar Start -->
+            <div class="top-bar">
+               <div class="slidedown collapse">
+                  <div class="container">
+                     <div class="phone-email pull-left">
+                        <!-- <a><i class="icon-phone"></i> Call Us : +880 41 723 272</a> -->
+                        <a href="mail@example.com"><i class="icon-envelope"></i> Email : report@scamreport.com</a>
+                     </div>
+                     <div class="pull-right">
+                        <!-- <ul class="social pull-left">
+                           <li class="facebook"><a href="#"><i class="icon-facebook"></i></a></li>
+                           <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                           <li class="dribbble"><a href="#"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#"><i class="icon-rss"></i></a></li>
+                        </ul>
+                        <div id="search-form" class="pull-right">
+                           <form action="#" method="get">
+                              <input type="text" class="search-text-box">
+                           </form>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Header Top Bar End -->
+            <!-- Main Header End -->
+         </header>
+         <!-- Header End -->  
+         <!-- Content Start -->
+         <div id="main">
+            <!-- Title, Breadcrumb Start-->
+            <div class="breadcrumb-wrapper">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <h2 class="title">Scam Report</h2>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <div class="breadcrumbs pull-right">
+                           <!-- <ul>
+                              <li>You are here:</li>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="#">Blog</a></li>
+                              <li>Small Blog</li>
+                           </ul> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Title, Breadcrumb End-->
+            <!-- Main Content start-->
+            <div class="content">
+               <div class="container">
+                  <div class="row">
+                     <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                        <article class="post hentry">
+                           <!-- <div class="post-image">
+                              <a href="/assets/blog/blog-post1.jpg" data-rel="prettyPhoto">
+                              <span class="img-hover"></span>
+                              <span class="fullscreen"><i class="icon-search"></i></span>
+                              <img src="/assets/blog/blog-post1.jpg" alt="">
+                              </a>
+                           </div> -->
+                           <div class="post-content-wrap">
+                              <header class="post-header">
+                                 <div class="post-date">
+                                    <a class="date" href="#"><strong>18</strong><i>SEP</i></a>
+                                 </div>
+                                 <h3 class="content-title">Blog post title</h3>
+                                 <div class="blog-entry-meta">
+                                    <div class="blog-entry-meta-author">
+                                       <i class="icon-user"></i>
+                                       <a href="#" class="blog-entry-meta-author">John Doe</a>
+                                    </div>
+                                    <div class="blog-entry-meta-tags">
+                                       <i class="icon-tags"></i>
+                                       <a href="#">Web Design</a>,
+                                       <a href="#">Branding</a>
+                                    </div>
+                                    <div class="blog-entry-meta-comments">
+                                       <i class="icon-comments"></i>
+                                       <a href="#" class="blog-entry-meta-comments">4 comments</a>
+                                    </div>
+                                 </div>
+                              </header>
+                              <div class="post-content">
+                                 <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen not only five centuries, but also the leap essentially.
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </article>
+                        <div class="blog-divider"></div>
+                        <div class="pagination-centered">
+                           <ul class="pagination">
+                              <li class="disabled"><a href="#">«</a></li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li><a href="#">»</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <!-- Search Widget Start -->
+                        <div class="widget search-form">
+                           <div class="input-group">
+                              <input type="text" value="Search..." onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';" class="search-input form-control">
+                              <span class="input-group-btn">
+                              <button type="submit" class="subscribe-btn btn"><i class="icon-search"></i></button>
+                              </span>
+                           </div>
+                           <!-- /input-group -->
+                        </div>
+                        <!-- Search Widget End -->
+                        <!-- Tab Start -->
+                        <div class="widget tabs">
+                           <div id="horizontal-tabs">
+                              <ul class="tabs">
+                                 <li id="tab1" class="current">Popular</li>
+                                 <li id="tab2">Recent</li>
+                                 <li id="tab3">Comments</li>
+                              </ul>
+                              <div class="contents">
+                                 <div class="tabscontent" id="content1" style="display: block;">
+                                    <ul class="posts">
+                                       <li>
+                                          <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="/assets/recent-post-img.jpg"></a>
+                                          <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                                          <span class="color">27 July 2013</span>
+                                       </li>
+                                       <li>
+                                          <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="/assets/recent-post-img.jpg"></a>
+                                          <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                                          <span class="color">30 July 2013</span>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="tabscontent" id="content2">
+                                    <ul class="posts">
+                                       <li>
+                                          <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="/assets/recent-post-img.jpg"></a>
+                                          <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                                          <span class="color">27 July 2013</span>
+                                       </li>
+                                       <li>
+                                          <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="/assets/recent-post-img.jpg"></a>
+                                          <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                                          <span class="color">30 July 2013</span>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="tabscontent" id="content3">
+                                    <ul class="posts">
+                                       <li>
+                                          <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="/assets/recent-post-img.jpg"></a>
+                                          <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                                          by <span class="color">wptuts+</span>
+                                       </li>
+                                       <li>
+                                          <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="/assets/recent-post-img.jpg"></a>
+                                          <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                                          by <span class="color">wptuts+</span>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tab End -->
+                        <!-- Testimonials Widget Start -->
+                        <div class="row">
+                           <div class="testimonials widget">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="testimonials-title">
+                                    <h3 class="title">Testimonials</h3>
+                                 </div>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div id="testimonials-carousel" class="testimonials-carousel slide">
+                                 <div class="carousel-inner">
+                                    <div class="item active">
+                                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="testimonial item">
+                                             <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                                             </p>
+                                             <div class="testimonials-arrow">
+                                             </div>
+                                             <div class="author">
+                                                <div class="testimonial-image "><img alt="" src="/assets/team/team-member.jpg"></div>
+                                                <div class="testimonial-author-info">
+                                                   <a href="#"><span class="color">Monica Sing</span></a> FIFO Themes
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="item">
+                                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="testimonial item">
+                                             <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                                             </p>
+                                             <div class="testimonials-arrow">
+                                             </div>
+                                             <div class="author">
+                                                <div class="testimonial-image "><img alt="" src="/assets/team/team-member.jpg"></div>
+                                                <div class="testimonial-author-info">
+                                                   <a href="#"><span class="color">Monzurul Haque</span></a> FIFO Themes
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="item">
+                                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="testimonial item">
+                                             <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                                             </p>
+                                             <div class="testimonials-arrow">
+                                             </div>
+                                             <div class="author">
+                                                <div class="testimonial-image "><img alt="" src="/assets/team/team-member.jpg"></div>
+                                                <div class="testimonial-author-info">
+                                                   <a href="#"><span class="color">Carol Johansen</span></a> FIFO Themes
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Category Widget Start -->
+                        <div class="widget category">
+                           <h3 class="title">Categories</h3>
+                           <ul class="category-list slide">
+                              <li><a href="#">Web Design</a></li>
+                              <li><a href="#">Graphic Design</a></li>
+                              <li><a href="#">Illustration</a></li>
+                              <li><a href="#">Logo Design</a></li>
+                              <li><a href="#">Wordpress Themes</a></li>
+                           </ul>
+                        </div>
+                        <!-- Category Widget End -->
+                        <!-- Ads Widget Start -->
+                        <div class="widget ads">
+                           <h3 class="title">Advertisement</h3>
+                           <div class="ads-img row">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                 <img class="img-thumbnail" alt="" src="/assets/ads-small.jpg">
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                 <img class="img-thumbnail" alt="" src="/assets/ads-small.jpg">
+                              </div>
+                           </div>
+                           <div class="ads-img row">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                 <img class="img-thumbnail" alt="" src="/assets/ads-small.jpg">
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                 <img class="img-thumbnail" alt="" src="/assets/ads-small.jpg">
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Ads Widget End -->
+                     </div>
+                     <!-- Sidebar End -->     
+                  </div>
+               </div>
+            </div>
+            <!-- Main Content end-->
+         </div>
+         <!-- Content End -->
+         <!-- Footer Start -->
+         <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+               <div class="container">
+                  <div class="row">
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                        <h3>About</h3>
+                        <p> 
+                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
+                        </p>
+                     </section>
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two">
+                        <h3>Twitter Stream</h3>
+                        <ul id="tweets">
+                        </ul>
+                     </section>
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-us">
+                           <li>
+                              <i class="icon-map-marker"></i>
+                              <p> 
+                                 <strong>Address:</strong> 250 Sher-E- Bangla Road, <br>
+                                 Khulna, Bangladesh 
+                              </p>
+                           </li>
+                           <li>
+                              <i class="icon-phone"></i>
+                              <p><strong>Phone:</strong> +880 41 723 272</p>
+                           </li>
+                           <li>
+                              <i class="icon-envelope"></i>
+                              <p><strong>Email:</strong><a href="mailto:info@fifothemes.com">info@fifothemes.com</a></p>
+                           </li>
+                        </ul>
+                     </section>
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-four">
+                        <h3>Flickr Photostream</h3>
+                        <ul id="flickrfeed" class="thumbs"></ul>
+                     </section>
+                  </div>
+               </div>
+            </div>
+            <!-- Footer Top End --> 
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright 2013 by <a href="#">Pixma</a>. All Rights Reserved. </div>
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                        <ul class="social social-icons-footer-bottom">
+                           <li class="facebook"><a href="#" data-toggle="tooltip" title="Facebook"><i class="icon-facebook"></i></a></li>
+                           <li class="twitter"><a href="#" data-toggle="tooltip" title="Twitter"><i class="icon-twitter"></i></a></li>
+                           <li class="dribbble"><a href="#" data-toggle="tooltip" title="Dribble"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#" data-toggle="tooltip" title="Rss"><i class="icon-rss"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Footer Bottom End --> 
+         </footer>
+         <!-- Scroll To Top --> 
+         <a href="#" class="scrollup"><i class="icon-angle-up"></i></a>
+      </div>
+      <!-- Wrap End -->
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  </body>
 </html>

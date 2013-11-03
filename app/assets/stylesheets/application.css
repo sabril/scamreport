@@ -9,4 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require fonts/font-awesome/css/font-awesome.css
+ *= require animations
+ *= require superfish
+ *= require prettyPhoto
+ *= require style
+ *= require colors/blue
+ *= require theme-responsive
 */

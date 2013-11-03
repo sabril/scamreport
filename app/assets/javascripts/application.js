@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require twitter/bootstrap
+//= require jquery.parallax
+//= require modernizr-2.6.2.min
+//= require revolution-slider/js/jquery.themepunch.revolution.min
+//= require jquery.nivo.slider.pack
+//= require jquery.prettyPhoto
+//= require superfish
+//= require tweetMachine
+//= require tytabs
+//= require jquery.sticky
+//= require jflickrfeed
+//= require imagesloaded.pkgd.min
+//= require waypoints.min
+//= require jquery.gmap.min
+//= require custom
