@@ -1,3 +1,5 @@
 deploy:
   provider: heroku
   api_key: a06342d18febc318b400d46f51050e96dae5fb83
+rvm:
+  - 2.0.0
